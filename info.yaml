@@ -1,6 +1,8 @@
---- 
+---
 # TinyTapeout project information
-project: 
+project:
+  wokwi_id:     341631511790879314
+documentation: 
   author:       "maehw"
   discord:      "maehw#7519"
   title:        "Low-speed UART transmitter with limited character set loading"
@@ -8,10 +10,9 @@ project:
   how_it_works: "The heart of the design is a 13 bit shift register (built from D flip-flops). When a word has been transmitted, it will be transmitted again and again until a new word is loaded into the shift register or the output is disabled (the word will keep on cycling internally)."
   how_to_test:  "Load a character into the design and attach a UART receiver (or oscilloscope or logic analyzer) on the output side."
   external_hw:  "UART receiver or oscilloscope or logic analyzer (optional)"
-  doc_link:     "https://github.com/maehw/wokwi-verilog-gds-lowspeed-tiny-uart/blob/main/README.md"
-  clock_hz:     9600     # Clock frequency in Hz (not sure if the design supports such a "high" value! could be even higher if technically possible! the clock rate defines the UART baudrate)
   language:     "wokwi"
-  wokwi_id:     341631511790879314
+  doc_link:     "https://github.com/maehw/tt02-wokwi-lowspeed-tiny-uart/blob/main/README.md"
+  clock_hz:     9600     # Clock frequency in Hz (not sure if the design supports such a "high" value! could be even higher if technically possible! the clock rate defines the UART baudrate)
   picture:      "wokwi-simulation-io-mapping.png" # relative path to a picture in your repository
   inputs:
     - 300 Hz input clock signal (or different value supported by the whole #tinytapeout design! defining the baudrate of the UART transmitter)
